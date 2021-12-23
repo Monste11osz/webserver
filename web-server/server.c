@@ -106,7 +106,7 @@ char *get_path(int client_socket)
 {
 	char *path;
 	char *cont = get_word(client_socket);
-	if(strcmp("GET", cont))
+	if(strcmp("GET", cont) != NULL)
 	{
 		perror("incorrect");
 	}
@@ -116,7 +116,7 @@ char *get_path(int client_socket)
 	free(cont);
 
 	cont = get_word(client_socket);
-	if(strcmp("Host:", cont))
+	if(strcmp("Host:", cont) != NULL)
 	{
 		perror("incorrec");
 	}
