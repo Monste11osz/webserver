@@ -82,7 +82,7 @@ int init_socket(int port) {
     return server_socket;
 }
 
-char *get_word(int client_socket)
+char get_word(int client_socket)
 {
 	char *answ = NULL;
 	char ch;
@@ -102,7 +102,7 @@ char *get_word(int client_socket)
 	return answ;
 }
 
-char *get_path(int client_socket)
+char get_path(int client_socket)
 {
 	char *path;
 	char *cont = get_word(client_socket);
